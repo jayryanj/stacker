@@ -1,5 +1,6 @@
 package dev.jayryanj.stacker.controller
 
+import dev.jayryanj.stacker.dto.Stack
 import org.springframework.http.HttpStatus
 import org.springframework.http.HttpStatusCode
 import org.springframework.http.ResponseEntity
@@ -18,7 +19,7 @@ class StackController {
     }
 
     @PostMapping("/stack")
-    fun stack() : ResponseEntity<String> {
-        return ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).body("Not yet implemented")
+    fun getStack() : ResponseEntity<Stack> {
+        return ResponseEntity.status(HttpStatus.OK).body(Stack())
     }
 }
